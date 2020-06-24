@@ -7,6 +7,9 @@ def sqrt(number):
     Returns:
        int: Floored Square Root
     """
+    if number is None or number < 0:
+        return None
+
     if number < 2:
         return int(number)
 
@@ -24,8 +27,6 @@ def sqrt(number):
 
     return None
 
-print ("Pass" if  (3 == sqrt(9)) else "Fail")
-print ("Pass" if  (0 == sqrt(0)) else "Fail")
-print ("Pass" if  (4 == sqrt(16)) else "Fail")
-print ("Pass" if  (1 == sqrt(1)) else "Fail")
-print ("Pass" if  (5 == sqrt(27)) else "Fail")
+if __name__ == "__main__":
+    for i, j in ((None, None), (-1, None), (0,0), (1,1), (9,3), (16,4), (27,5)):
+        assert(sqrt(i) == j)
