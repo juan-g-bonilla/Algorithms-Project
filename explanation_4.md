@@ -1,0 +1,2 @@
+We iterate through each element in input_list and if we encounter a 0, we switch it with elements in the front and if we encounter a 2 we switch it with elements in the back. 
+For each element in the array we keep switching until we encounter a 1, at which moment we move on to the next index. The time complexity is then O(n), but it's a single transversal O(n)
